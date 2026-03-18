@@ -1,0 +1,13 @@
+{
+    "name": "F1-Predictions",
+    "dependencies": {
+        "express": "^5.2.1"
+    },
+    "type": "module",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14"
+    }
+}
