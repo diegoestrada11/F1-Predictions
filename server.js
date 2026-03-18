@@ -1,12 +1,10 @@
-// Import express using ESM syntax
-import express from 'express';
+// Imports
+import express from "express";
 
-// Create an instance of an Express application
 const app = express();
 
-// Define a route handler for the root URL ('/')
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.get("/", (req, res) => {
+  res.send("F1 Prediction App Running");
 });
 
 // Define the port number the server will listen on
