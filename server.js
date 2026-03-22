@@ -1,16 +1,43 @@
+// ======================
 // Imports
+// ======================
+import "dotenv/config";
 import express from "express";
+import indexRoutes from "./src/routes/indexRoutes.js";
 
+
+// ======================
+// Declare Important Variables
+// ======================
+const PORT = process.env.PORT || 3000;
+
+
+// ======================
+// Setup Express Server
+// ======================
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("F1 Prediction App Running");
-});
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Define the port number the server will listen on
-const PORT = 3000;
+// Static files
+app.use(express.static("public"));
 
-// Start the server and listen on the specified port
+// EJS setup
+app.set("view engine", "ejs");
+app.set("views", "./src/views");
+
+
+// ======================
+// Declare Routes
+// ======================
+app.use("/", indexRoutes);
+
+
+// ======================
+// Start the server
+// ======================
 app.listen(PORT, () => {
-    console.log(`Server is running on http://127.0.0.1:${PORT}`);
+  console.log(`F1-Predictions running at http://localhost:${PORT}`);
 });
