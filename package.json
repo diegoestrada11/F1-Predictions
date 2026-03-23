@@ -1,6 +1,7 @@
 {
     "name": "F1-Predictions",
     "dependencies": {
+        "dotenv": "^17.3.1",
         "express": "^5.2.1"
     },
     "type": "module",
