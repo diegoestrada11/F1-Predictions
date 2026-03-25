@@ -1,0 +1,14 @@
+export const submitPrediction = (req, res) => {
+  const { p1, p2, p3, raceId } = req.body;
+
+  console.log("Prediction received:");
+  console.log({
+    p1,
+    p2,
+    p3,
+    raceId
+  });
+
+  // For now, just send user back
+  res.redirect(`/races/${raceId}`);
+};
