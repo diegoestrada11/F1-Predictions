@@ -4,6 +4,9 @@
 import "dotenv/config";
 import express from "express";
 import indexRoutes from "./src/routes/indexRoutes.js";
+import raceRoutes from "./src/routes/raceRoutes.js";
+import predictionRoutes from "./src/routes/predictionRoutes.js";
+
 
 
 // ======================
@@ -33,7 +36,13 @@ app.set("views", "./src/views");
 // Declare Routes
 // ======================
 app.use("/", indexRoutes);
+app.use("/races", raceRoutes);
+app.use("/predictions", predictionRoutes);
 
+// 404 handler 
+app.use((req, res) => {
+  res.status(404).render("404");
+});
 
 // ======================
 // Start the server
