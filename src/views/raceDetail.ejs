@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= race.name %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="race-detail">
+
+    <%- include("partials/header") %>
+
+    <main class="race-detail-page">
+        <div class="race-card">
+            <h1><%= race.name %></h1>
+
+            <p class="race-location">
+                📍 <%= race.location %>
+            </p>
+
+            <div class="race-actions">
+                <a href="/races">← Back to Races</a>
+            </div>
+        </div>
+
+        <section class="prediction-form">
+            <h2>Make a Prediction</h2>
+
+            <form action="/predictions" method="POST">
+                <label>P1:</label>
+                <input type="text" name="p1" required>
+
+                <label>P2:</label>
+                <input type="text" name="p2" required>
+
+                <label>P3:</label>
+                <input type="text" name="p3" required>
+
+                <input type="hidden" name="raceId" value="<%= race.id %>">
+
+                <button type="submit">Submit Prediction</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>
