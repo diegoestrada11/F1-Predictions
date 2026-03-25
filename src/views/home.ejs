@@ -8,18 +8,35 @@
 
     <%- include("partials/header") %>
 
-    <main>
-        <h1>Welcome to F1 Predictions 🏎️</h1>
-        <p>Predict race results and compete with other users.</p>
+    <main class="home-hero">
 
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Make predictions for races</li>
-                <li>View race results</li>
-                <li>Check leaderboard rankings</li>
-            </ul>
-        </section>
+        <!-- Left Image -->
+        <div class="hero-side">
+            <img src="/images/formula-one-racing.jpg" alt="F1 car left">
+        </div>
+
+        <!-- Center Content -->
+        <div class="hero-content">
+            <h1> F1 Predictions</h1>
+            <p>Predict race results and compete with other users.</p>
+
+            <a href="/races" class="hero-button">View Races</a>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Make predictions for races</li>
+                    <li>View race results</li>
+                    <li>Check leaderboard rankings</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Right Image -->
+        <div class="hero-side">
+            <img src="/images/formula-one-racing.jpg" alt="F1 car right">
+        </div>
+
     </main>
 
     <%- include("partials/footer") %>
