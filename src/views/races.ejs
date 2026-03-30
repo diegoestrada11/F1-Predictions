@@ -14,9 +14,16 @@
         <div class="race-list">
             <% races.forEach(race => { %>
                 <div class="race-card">
-                    <a href="/races/<%= race.id %>">
-                        <strong><%= race.name %></strong>
-                    </a> - <%= race.location %>
+                
+                <a href="/races/<%= race.id %>">
+                    <img src="<%= race.image %>" alt="<%= race.name %>">
+                </a>
+
+                <div class="info">
+                    <strong><%= race.name %></strong>
+                    <p><%= race.description %></p>
+                </div>
+
                 </div>
             <% }) %>
         </div>
