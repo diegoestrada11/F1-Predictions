@@ -73,10 +73,15 @@ export const buildRaceDetail = (req, res) => {
 
   const races = [
     { id: "Silverstone", name: "Silverstone", location: "Bahrain" },
-    { id: 2, name: "Saudi Arabian Grand Prix", location: "Jeddah" },
-    { id: 3, name: "Australian Grand Prix", location: "Melbourne" }
+    { id: "Monza", name: "Monza", location: "Jeddah" },
+    { id: "Spa-Francorchamps", name: "Spa-Francorchamps", location: "Belgium" },
+    { id: "Hungaroring", name: "Hungaroring", location: "Hungary" },
+    { id: "Zandvoort", name: "Zandvoort", location: "Netherlands" },
+    { id: "Red Bull Ring", name: "Red Bull Ring", location: "Austria" },
+    { id: "Barcelona-Catalunya", name: "Circuit de Barcelona-Catalunya", location: "Spain" },
+    { id: "Imola", name: "Imola", location: "Italy" }
   ];
-
+  
   const race = races.find(r => r.id == raceId);
 
   if (!race) {
