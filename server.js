@@ -4,9 +4,8 @@
 import "dotenv/config";
 import express from "express";
 import indexRoutes from "./src/routes/indexRoutes.js";
-import raceRoutes from "./src/routes/raceRoutes.js";
-import predictionRoutes from "./src/routes/predictionRoutes.js";
-
+import raceRoutes from "./src/routes/races/raceRoutes.js";
+import predictionRoutes from "./src/routes/predictions/predictionRoutes.js";
 
 
 // ======================

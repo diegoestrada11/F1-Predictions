@@ -1,3 +1,5 @@
+import { addPrediction } from "../../models/predictions/predictionModel.js";
+
 export const submitPrediction = (req, res) => {
   const { p1, p2, p3, raceId } = req.body;
 
@@ -9,6 +11,5 @@ export const submitPrediction = (req, res) => {
     raceId
   });
 
-  // For now, just send user back
   res.redirect(`/races/${raceId}`);
 };

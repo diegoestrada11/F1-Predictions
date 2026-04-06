@@ -1,5 +1,5 @@
 import express from "express";
-import { submitPrediction } from "../controllers/predictionController.js";
+import { submitPrediction } from "../../controllers/predictions/predictionController.js";
 
 const router = express.Router();
 

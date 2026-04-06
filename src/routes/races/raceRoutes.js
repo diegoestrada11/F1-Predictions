@@ -1,5 +1,5 @@
 import express from "express";
-import { buildRaceList, buildRaceDetail } from "../controllers/raceController.js";
+import { buildRaceList, buildRaceDetail } from "../../controllers/races/raceController.js";
 
 const router = express.Router();
 

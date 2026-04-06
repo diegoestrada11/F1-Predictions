@@ -1,6 +1,7 @@
 {
     "name": "F1-Predictions",
     "dependencies": {
+        "bcrypt": "^6.0.0",
         "connect-pg-simple": "^10.0.0",
         "debug": "^4.4.3",
         "dotenv": "^17.3.1",

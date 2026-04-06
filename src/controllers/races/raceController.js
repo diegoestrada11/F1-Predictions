@@ -1,3 +1,5 @@
+import { getPredictionsByRace } from "../../models/predictions/predictionModel.js";
+
 // ======================
 // Build Race List Page
 // ======================
@@ -61,7 +63,7 @@ export const buildRaceList = (req, res) => {
     }
   ];
 
-  res.render("races", { races });
+  res.render("races/races", { races, });
 };
 
 
@@ -88,5 +90,5 @@ export const buildRaceDetail = (req, res) => {
     return res.send("Race not found");
   }
 
-  res.render("raceDetail", { race });
+  res.render("races/raceDetail", { race });
 };
