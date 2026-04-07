@@ -1,0 +1,16 @@
+body.error-page {
+    text-align: center;
+
+    .error-container {
+        margin-top: 3rem;
+
+        img {
+            max-width: 200px;
+        }
+
+        a {
+            color: var(--primary);
+            font-weight: bold;
+        }
+    }
+}

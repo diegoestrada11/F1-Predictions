@@ -3,16 +3,16 @@
 // ======================
 import "dotenv/config";
 import express from "express";
+import session from "express-session";
 import indexRoutes from "./src/routes/indexRoutes.js";
 import raceRoutes from "./src/routes/races/raceRoutes.js";
 import predictionRoutes from "./src/routes/predictions/predictionRoutes.js";
-
+import authRoutes from "./src/routes/auth/authRoutes.js";
 
 // ======================
 // Declare Important Variables
 // ======================
 const PORT = process.env.PORT || 3000;
-
 
 // ======================
 // Setup Express Server
@@ -34,6 +34,12 @@ app.set("views", "./src/views");
 // ======================
 // Declare Routes
 // ======================
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
+app.use("/", authRoutes);
 app.use("/", indexRoutes);
 app.use("/races", raceRoutes);
 app.use("/predictions", predictionRoutes);

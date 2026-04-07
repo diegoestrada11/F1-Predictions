@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.get("/", buildHome);
 
-export default router;
+export default router;   // 🔥 REQUIRED

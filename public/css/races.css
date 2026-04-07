@@ -1,0 +1,44 @@
+body.races {
+    .race-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .race-card {
+            background: var(--card);
+            border-radius: 14px;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+            transition: all 0.2s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            }
+
+            img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            .info {
+                padding: 1rem;
+
+                strong {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    color: var(--muted);
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
