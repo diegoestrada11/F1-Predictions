@@ -23,25 +23,35 @@
                 <a href="/races">← Back to Races</a>
             </div>
         </div>
+        
+        <% if (user) { %>
+            <section class="prediction-form">
+                <h2>Make a Prediction</h2>
 
-        <section class="prediction-form">
-            <h2>Make a Prediction</h2>
+                <form action="/predictions" method="POST">
+                    <label>P1:</label>
+                    <input type="text" name="p1" required>
 
-            <form action="/predictions" method="POST">
-                <label>P1:</label>
-                <input type="text" name="p1" required>
+                    <label>P2:</label>
+                    <input type="text" name="p2" required>
 
-                <label>P2:</label>
-                <input type="text" name="p2" required>
+                    <label>P3:</label>
+                    <input type="text" name="p3" required>
 
-                <label>P3:</label>
-                <input type="text" name="p3" required>
+                    <input type="hidden" name="raceId" value="<%= race.id %>">
 
-                <input type="hidden" name="raceId" value="<%= race.id %>">
+                    <button type="submit">Submit Prediction</button>
+                </form>
+            </section>
 
-                <button type="submit">Submit Prediction</button>
-            </form>
-        </section>
+
+        <% } else { %>
+
+        <p>
+        🔒 You must <a href="/login">log in</a> to make a prediction.
+        </p>
+
+        <% } %>    
     </main>
 
     <%- include("../partials/footer") %>

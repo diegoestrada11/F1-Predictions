@@ -1,0 +1,31 @@
+body.leaderboard {
+    .leaderboard-page {
+        max-width: 600px;
+        min-height: 70vh;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    .leaderboard-list {
+        margin-top: 2rem;
+    }
+
+    .leader-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: var(--card);
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+
+        span {
+            color: var(--muted);
+        }
+
+        strong {
+            color: white;
+        }
+    }
+}

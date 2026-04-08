@@ -8,6 +8,7 @@ import indexRoutes from "./src/routes/indexRoutes.js";
 import raceRoutes from "./src/routes/races/raceRoutes.js";
 import predictionRoutes from "./src/routes/predictions/predictionRoutes.js";
 import authRoutes from "./src/routes/auth/authRoutes.js";
+import leaderboardRoutes from "./src/routes/leaderboard/leaderboardRoutes.js";
 
 // ======================
 // Declare Important Variables
@@ -39,10 +40,15 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use((req, res, next) => {
+  res.locals.user = req.session.user || null;
+  next();
+});
 app.use("/", authRoutes);
 app.use("/", indexRoutes);
 app.use("/races", raceRoutes);
 app.use("/predictions", predictionRoutes);
+app.use("/leaderboard", leaderboardRoutes);
 
 // 404 handler 
 app.use((req, res) => {

@@ -114,3 +114,23 @@ body.auth {
         }
     }
 }
+
+/* Error message */
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4d4d;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Success message */
+.success-message {
+    background: rgba(0, 255, 0, 0.15);
+    color: #4dff88;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}

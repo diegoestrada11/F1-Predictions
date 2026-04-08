@@ -10,6 +10,10 @@
     <div class="auth-card">
         <h1>Create Account</h1>
 
+        <% if (error) { %>
+            <p class="error-message"><%= error %></p>
+        <% } %>
+        
         <form action="/register" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>

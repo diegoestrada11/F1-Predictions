@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/leaderboard.css">
+</head>
+
+<body class="leaderboard">
+
+<%- include("../partials/header") %>
+
+<main class="leaderboard-page">
+    <h1>🏆 Leaderboard</h1>
+
+    <div class="leaderboard-list">
+        <% leaderboard.forEach((user, index) => { %>
+            <div class="leader-card">
+                <span>#<%= index + 1 %></span>
+                <strong><%= user.username %></strong>
+                <span><%= user.points %> pts</span>
+            </div>
+        <% }) %>
+    </div>
+</main>
+
+<%- include("../partials/footer") %>
+
+</body>
+</html>
